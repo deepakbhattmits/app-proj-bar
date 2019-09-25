@@ -1,0 +1,24 @@
+import { beerConstants } from "../constants";
+import api from "../helpers/api";
+import { toast } from "react-toastify";
+
+export const getBeers = () => async dispatch => {
+  const response = await api.get(`beers/`);
+  dispatch({ type: beerConstants.GET_BEERS, payload: response.data });
+};
+export const getBeerByName = beer_name => async dispatch => {
+  const response = await api.get(`beers?beer_name=${beer_name}`);
+  dispatch({ type: beerConstants.GET_BEER_BY_NAME, payload: response.data });
+};
+export const addTofavorites = selectedBeerId => async dispatch => {
+  const response = await api.get(`beers/${selectedBeerId}`);
+  dispatch({
+    type: beerConstants.ADD_FAVORITE,
+    payload: response.data && response.data[0]
+  });
+  toast.success("Added To Favorite");
+};
+export const removeFromfavorites = wantRemoveId => dispatch => {
+  dispatch({ type: beerConstants.REMOVE_FAVORITE, payload: wantRemoveId });
+  toast.error("Remove From Favorite");
+};
