@@ -26,11 +26,15 @@ header {
 }
 footer {
   height: 42px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 5;
 }
 article {
-  height: calc(100% - 82px);
+  /* height: calc(100% - 82px);
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: auto; */
 }
 .loading {
   display: flex;
@@ -50,6 +54,7 @@ article {
 .ui.secondary.menu .right .item {
   background-color: transparent;
   color: blueviolet;
+  z-index: 1;
 }
 .ui.secondary.menu .right .item:hover {
   background-color: #e4e4e4;
@@ -66,7 +71,7 @@ article {
 }
 .ui.link.cards {
   width: 98%;
-  margin: auto;
+  margin: 0 auto 40px;
 }
 .ui.medium.image {
   margin: auto;
@@ -88,7 +93,7 @@ article {
 .ui.link.cards.favorite {
   margin-top: 20px;
   width: 92%;
-  margin: auto;
+  margin: 0 auto 40px;
 }
 .ui.link.cards .description {
   max-height: 60px;
@@ -113,7 +118,6 @@ article {
 .ui.primary.button {
   border-radius: 0;
 }
-
 
 /*------------------*/
 
@@ -147,7 +151,7 @@ article {
   color: #fff;
 }
 .toast.warning {
-  background-color: #F38211;
+  background-color: #f38211;
 }
 .toast.warning p {
   color: #fff;
@@ -164,7 +168,7 @@ article {
 }
 .toast p {
   color: #fff;
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
   font-size: 14px;
   white-space: nowrap;
 }

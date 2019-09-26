@@ -16,9 +16,12 @@ export const addTofavorites = selectedBeerId => async dispatch => {
     type: beerConstants.ADD_FAVORITE,
     payload: response.data && response.data[0]
   });
-  toast.success("Added To Favorite");
+  const beerName = response.data && response.data[0]["name"];
+  toast.success(`Added To Favorite item Name : ${beerName}`);
 };
-export const removeFromfavorites = wantRemoveId => dispatch => {
+export const removeFromfavorites = wantRemoveId => async dispatch => {
+  const response = await api.get(`beers/${wantRemoveId}`);
   dispatch({ type: beerConstants.REMOVE_FAVORITE, payload: wantRemoveId });
-  toast.error("Remove From Favorite");
+  const beerName = response.data && response.data[0]["name"];
+  toast.error(`Removed From Favorite item Name : ${beerName}`);
 };
