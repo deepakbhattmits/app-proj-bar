@@ -6,15 +6,21 @@ class SearchPage extends Component {
   state = {
     beerName: ""
   };
-
+  getData = () => {
+    if (this.state.beerName.length > 0) {
+      this.props.getBeerByName(this.state.beerName);
+    } else {
+      this.props.getBeers();
+    }
+  }
   handleChange = e => {
     this.setState({ [e.target.name]: e.target.value }, () => {
-      if (this.state.beerName.length > 0) {
-        this.props.getBeerByName(this.state.beerName);
-      } else {
-        this.props.getBeers();
-      }
+      const timer = setTimeout(() => {
+        this.getData()
+      }, 5000)
+      return () => { clearTimeout(timer) }
     });
+
   };
   onKeyUp = e => {
     if (e.keyCode === 13) {
@@ -29,6 +35,9 @@ class SearchPage extends Component {
       this.props.getBeers();
     }
   };
+  // componentWillUnmount() {
+  //   clearTimeout(timer)
+  // }
   render() {
     return (
       <div className="ui row">
