@@ -35,7 +35,7 @@ const MainComponent = props => {
 											Object.values(props.className).filter(item =>
 												item.id === el.id ? item.id : ''
 											).length > 0
-												? props.removeFromfavorites
+												? props.removeFromfavorite
 												: props.addToFavorite
 										}
 										title={`${
