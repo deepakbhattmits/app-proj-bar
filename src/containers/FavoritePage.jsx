@@ -1,28 +1,27 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import FavoriteComponent from "../components/FavoriteComponent";
-import { removeFromfavorites } from "../actions";
-class FavoritePage extends Component {
-  render() {
-    return (
-      <div className="ui row">
-        <FavoriteComponent
-          fBeers={this.props.favoriteBeer}
-          umarkFav={this.props.removeFromfavorites}
-        />
-      </div>
-    );
-  }
-}
-const mapDispatchToProps = dispatch => ({
-  removeFromfavorites: data => dispatch(removeFromfavorites(data))
-});
-const mapStateToProps = state => {
-  return {
-    favoriteBeer: state.beerData.addFbeers
-  };
+/** @format */
+
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import FavoriteComponent from '../components/FavoriteComponent';
+import { removeFromfavorites } from '../actions';
+const FavoritePage = () => {
+	const favoriteBeer = useSelector(state => state.beerData.addFbeers);
+	const dispatch = useDispatch();
+	return (
+		<div className='ui row'>
+			<FavoriteComponent
+				fBeers={favoriteBeer}
+				umarkFav={dispatch(removeFromfavorites)}
+			/>
+		</div>
+	);
 };
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FavoritePage);
+// const mapDispatchToProps = dispatch => ({
+// 	removeFromfavorites: data => dispatch(removeFromfavorites(data))
+// });
+// const mapStateToProps = state => {
+// 	return {
+// 		favoriteBeer: state.beerData.addFbeers
+// 	};
+// export default connect(mapStateToProps, mapDispatchToProps)(FavoritePage);
+export default FavoritePage;
