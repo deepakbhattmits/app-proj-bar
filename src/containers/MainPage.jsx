@@ -1,46 +1,44 @@
 /** @format */
 
-import React, { Component, Fragment } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import MainComponent from '../components/MainComponent';
 import { getBeers, addTofavorites, removeFromfavorites } from '../actions';
 import SearchPage from './SearchPage';
-class MainPage extends Component {
-	componentDidMount() {
-		if (!this.props.beers) {
-			this.props.getBeers(); // call action
+const MainPage = props => {
+	const getfav = () => {
+		return props.fbeers;
+	};
+	useEffect(() => {
+		if (!props.beers) {
+			props.getBeers(); // call action
 		}
-	}
-	getDrivedStateFromProps() {
-		this.getfav();
-	}
-	getfav = () => {
-		return this.props.fbeers;
+		getfav();
+	}, [props]);
+	// const getDrivedStateFromProps = () => {
+	// 	getfav();
+	// };
+	const addToFavorite = e => {
+		props.addTofavorites(e.target.id);
 	};
-	addToFavorite = e => {
-		this.props.addTofavorites(e.target.id);
+	const removeFromfavorites = e => {
+		props.removeFromfavorites(e.target.id);
 	};
-	removeFromfavorites = e => {
-		this.props.removeFromfavorites(e.target.id);
-	};
-
-	render() {
-		return (
-			<Fragment>
-				<SearchPage />
-				<div className='ui row'>
-					<MainComponent
-						beers={this.props.beers}
-						fbeers={this.getfav()}
-						addToFavorite={this.addToFavorite}
-						removeFromfavorites={this.removeFromfavorites}
-						className={this.props.favorites}
-					/>
-				</div>
-			</Fragment>
-		);
-	}
-}
+	return (
+		<>
+			<SearchPage />
+			<div className='ui row'>
+				<MainComponent
+					beers={props.beers}
+					fbeers={getfav()}
+					addToFavorite={addToFavorite}
+					removeFromfavorites={removeFromfavorites}
+					className={props.favorites}
+				/>
+			</div>
+		</>
+	);
+};
 const mapDispatchToProps = dispatch => ({
 	getBeers: () => dispatch(getBeers()),
 	addTofavorites: data => dispatch(addTofavorites(data)),
