@@ -10,7 +10,7 @@ import daterangepicker from 'daterangepicker';
 const Navigation = props => {
 	const datePicker = useRef();
 	const dateRange = useCallback(datePicker => {
-		console.log('call ');
+		// console.log('call ');
 		new daterangepicker(datePicker, {
 			singleDatePicker: true,
 			showDropdowns: true,
