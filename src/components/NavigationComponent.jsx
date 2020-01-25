@@ -10,16 +10,26 @@ import daterangepicker from 'daterangepicker';
 const Navigation = props => {
 	const datePicker = useRef();
 	const dateRange = useCallback(datePicker => {
-		// console.log('call ');
-		new daterangepicker(datePicker, {
-			singleDatePicker: true,
-			showDropdowns: true,
-			locale: {
-				format: 'MMMM DD YYYY'
+		new daterangepicker(
+			datePicker,
+			{
+				singleDatePicker: true,
+				showDropdowns: true,
+				locale: {
+					format: 'MMMM DD YYYY'
+				},
+				minYear: 1901,
+				maxYear: 2020
 			},
-			minYear: 1901,
-			maxYear: 2020
-		});
+			function(start, end, label) {
+				console.log(
+					'A new date selection was made: ' +
+						start.format('MMMM-DD-YYYY') +
+						' to ' +
+						end.format('MMMM-DD-YYYY')
+				);
+			}
+		);
 	}, []);
 	useEffect(() => {
 		dateRange(datePicker.current);
@@ -31,38 +41,14 @@ const Navigation = props => {
 					Project Name
 				</NavLink>
 			</div>
-			<div
-				id='reportrange'
-				style={{
-					display: 'flex',
-					background: '#fff',
-					cursor: 'pointer',
-					border: '1px solid #ccc',
-					width: `calc(100% / 4)`,
-					height: '25px',
-					alignItems: 'center'
-				}}>
-				<CalenderSVG
-					className='icon icon-cal'
-					style={{
-						zIndex: '1',
-						pointerEvents: 'none',
-						cursor: 'pointer',
-						position: 'absolute'
-					}}
-				/>
+			<div id='reportrange' className='date-range-wrapper'>
+				<CalenderSVG className='icon icon--cal' />
 				<input
 					ref={datePicker}
 					type='text'
 					name='daterange'
 					placeholder='January 22 2020'
-					style={{
-						outline: 'none',
-						border: 'none',
-						width: '100%',
-						paddingLeft: '1.8rem',
-						cursor: 'pointer'
-					}}
+					className='date--input'
 				/>
 			</div>
 			<div className='right menu'>
