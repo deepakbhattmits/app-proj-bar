@@ -30,7 +30,7 @@ const Favorite = props => {
 			props.fBeers &&
 			Object.values(props.fBeers).map((el, i, self) => {
 				return (
-					<div className='card' key={i}>
+					<div className='card a' key={i}>
 						<div className='ui medium image'>
 							<img
 								className='ui medium image'
