@@ -22,12 +22,12 @@ const Navigation = props => {
 				maxYear: 2020
 			},
 			function(start, end, label) {
-				console.log(
-					'A new date selection was made: ' +
-						start.format('MMMM-DD-YYYY') +
-						' to ' +
-						end.format('MMMM-DD-YYYY')
-				);
+				// console.log(
+				// 	'A new date selection was made: ' +
+				// 		start.format('MMMM-DD-YYYY') +
+				// 		' to ' +
+				// 		end.format('MMMM-DD-YYYY')
+				// );
 			}
 		);
 	}, []);
