@@ -15,7 +15,7 @@ const MainPage = props => {
 	};
 	useEffect(() => {
 		if (!beers) {
-			dispatch(getBeers()); // action call
+			dispatch(getBeers()); // call action
 		}
 	}, [beers, dispatch]);
 	const addToFavorite = e => {
