@@ -14,13 +14,15 @@
 		"react-grid-layout": "^0.17.1",
 		"react-redux": "^7.1.0",
 		"react-router-dom": "^5.0.1",
-		"react-scripts": "3.0.1",
+		"react-scripts": "^3.3.1",
 		"react-toastify": "5.4.0",
 		"redux": "^4.0.1",
 		"redux-persist": "6.0.0",
 		"redux-thunk": "^2.3.0"
 	},
 	"devDependencies": {
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.2",
 		"typescript": "3.3.3"
 	},
 	"eslintConfig": {
