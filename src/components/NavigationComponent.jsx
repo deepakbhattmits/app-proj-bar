@@ -32,6 +32,7 @@ const Navigation = props => {
 		);
 	}, []);
 	useEffect(() => {
+		console.log('datePicker');
 		dateRange(datePicker.current);
 	}, []);
 	return (
