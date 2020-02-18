@@ -19,7 +19,7 @@ class SearchPage extends Component {
 		this.setState({ [e.target.name]: e.target.value }, () => {
 			const timer = setTimeout(() => {
 				this.getData();
-				console.log('Test');
+				// console.log('Test');
 			}, 5000);
 			return () => {
 				clearTimeout(timer);
