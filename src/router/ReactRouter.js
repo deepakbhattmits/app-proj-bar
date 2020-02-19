@@ -12,7 +12,7 @@ import ScrollToTop from '../components/ScrollToTop';
 
 class ReactRouter extends Component {
 	render() {
-		console.log('test');
+		// console.log('test');
 		return (
 			<Router history={createBrowserHistory}>
 				<ScrollToTop>
