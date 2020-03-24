@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 // getBeers action
 export const getBeers = () => async dispatch => {
 	const response = await api.get(`beers/`);
-	console.log('getbeers');
+	// console.log('getbeers');
 	dispatch({ type: beerConstants.GET_BEERS, payload: response.data });
 };
 export const getBeerByName = beer_name => async dispatch => {
@@ -23,6 +23,7 @@ export const addTofavorites = selectedBeerId => async dispatch => {
 	toast.success(`Added To Favorite item Name : ${beerName}`);
 };
 export const removeFromfavorites = wantRemoveId => async dispatch => {
+	console.log('action', wantRemoveId);
 	const response = await api.get(`beers/${wantRemoveId}`);
 	dispatch({ type: beerConstants.REMOVE_FAVORITE, payload: wantRemoveId });
 	const beerName = response.data && response.data[0]['name'];
