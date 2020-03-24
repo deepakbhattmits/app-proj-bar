@@ -23,7 +23,6 @@ export const addTofavorites = selectedBeerId => async dispatch => {
 	toast.success(`Added To Favorite item Name : ${beerName}`);
 };
 export const removeFromfavorites = wantRemoveId => async dispatch => {
-	console.log('action', wantRemoveId);
 	const response = await api.get(`beers/${wantRemoveId}`);
 	dispatch({ type: beerConstants.REMOVE_FAVORITE, payload: wantRemoveId });
 	const beerName = response.data && response.data[0]['name'];
