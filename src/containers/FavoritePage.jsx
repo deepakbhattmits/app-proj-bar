@@ -12,7 +12,7 @@ const FavoritePage = () => {
 		<div className='ui row'>
 			<FavoriteComponent
 				fBeers={favoriteBeer}
-				umarkFav={dispatch(removeFromfavorites)}
+				umarkFav={e => dispatch(removeFromfavorites(e))}
 			/>
 		</div>
 	);
