@@ -10,7 +10,6 @@ const Favorite = props => {
 		setHover(!hover);
 	};
 	const handleRemove = e => {
-		console.log('remove :', e.target.id);
 		props.umarkFav(e.target.id);
 	};
 	const renderFav = () => {
