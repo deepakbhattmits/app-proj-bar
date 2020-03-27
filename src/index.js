@@ -24,6 +24,7 @@ const store1 = createStore(
 	persistedReducer,
 	composeEnhancers(applyMiddleware(reduxThunk))
 );
+// rootElement variable
 const rootElement = document.querySelector('#root');
 const persistor = persistStore(store1);
 ReactDOM.render(
