@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Header = () => {
-	// console.log('TEST');
+	console.log('TEST');
 	return (
 		<div className='ui row'>
 			<NavigationComponent />
