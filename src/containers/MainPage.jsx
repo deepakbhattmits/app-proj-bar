@@ -6,7 +6,7 @@ import MainComponent from '../components/MainComponent';
 import { getBeers, addTofavorites, removeFromfavorites } from '../actions';
 import SearchPage from './SearchPage';
 const MainPage = props => {
-	// console.log(props);
+	console.log(props);
 	const dispatch = useDispatch();
 	const beers = useSelector(state => state.beerData.beers);
 	const fbeers = useSelector(state => state.beerData.addFbeers);
