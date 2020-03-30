@@ -6,7 +6,7 @@ import FavoriteComponent from '../components/FavoriteComponent';
 import { removeFromfavorites } from '../actions';
 const FavoritePage = () => {
 	const favoriteBeer = useSelector(state => state.beerData.addFbeers);
-	console.log(favoriteBeer);
+	// console.log(favoriteBeer);
 	const dispatch = useDispatch();
 	return (
 		<div className='ui row'>
