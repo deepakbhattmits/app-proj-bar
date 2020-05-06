@@ -1,29 +1,29 @@
 /** @format */
 
-// import React from 'react';
-// import React, { useRef, useEffect, useCallback } from 'react';
 import React from 'react';
+// import React, { useRef, useEffect, useCallback } from 'react';
 // import { ReactComponent as CalenderSVG } from '../assets/images/icon-calendar.svg';
 
 import { NavLink } from 'react-router-dom';
 // import daterangepicker from 'daterangepicker';
 
-const Navigation = props => {
+const Navigation = (props) => {
 	// console.log('TEST :');
 	// const datePicker = useRef();
-	// const dateRange = useCallback(datePicker => {
+	// const dateRange = useCallback((datePicker) => {
 	// 	new daterangepicker(
 	// 		datePicker,
 	// 		{
+	// 			timePicker: true,
 	// 			singleDatePicker: true,
 	// 			showDropdowns: true,
 	// 			locale: {
-	// 				format: 'MMMM DD YYYY'
+	// 				format: 'MMMM DD YYYY',
 	// 			},
 	// 			minYear: 1901,
-	// 			maxYear: 2020
+	// 			maxYear: 2020,
 	// 		},
-	// 		function(start, end, label) {
+	// 		function (start, end, label) {
 	// 			// console.log(
 	// 			// 	'new date selection was made: ',
 	// 			// 		start.format('MMMM-DD-YYYY') ,
