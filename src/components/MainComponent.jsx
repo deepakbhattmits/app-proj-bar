@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-const MainComponent = props => {
-	console.log(props);
+const MainComponent = (props) => {
+	// console.log(props);
 	return (
 		<>
 			<div className='ui link cards'>
@@ -25,7 +25,7 @@ const MainComponent = props => {
 										className={`right floated star icon
                   ${
 										props.className &&
-										Object.values(props.className).filter(item =>
+										Object.values(props.className).filter((item) =>
 											item.id === el.id ? item.id : ''
 										).length > 0
 											? 'green'
@@ -33,7 +33,7 @@ const MainComponent = props => {
 									}`}
 										onClick={
 											props.className &&
-											Object.values(props.className).filter(item =>
+											Object.values(props.className).filter((item) =>
 												item.id === el.id ? item.id : ''
 											).length > 0
 												? props.removeFromfavorite
@@ -41,7 +41,7 @@ const MainComponent = props => {
 										}
 										title={`${
 											props.className &&
-											Object.values(props.className).filter(item =>
+											Object.values(props.className).filter((item) =>
 												item.id === el.id ? item.id : ''
 											).length > 0
 												? 'Unmark Favorite'
