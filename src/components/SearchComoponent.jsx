@@ -1,8 +1,8 @@
 /** @format */
 
 import React from 'react';
-const SearchComoponent = props => {
-	console.log(props);
+const SearchComoponent = (props) => {
+	// console.log(props);
 	return (
 		<div className='ui category search'>
 			<div className='ui icon input'>
