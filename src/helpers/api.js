@@ -1,7 +1,7 @@
 /** @format */
 
 import axios from 'axios';
-// base url.
+// baseUrl.
 export default axios.create({
 	baseURL: `https://api.punkapi.com/v2/`,
 	headers: {
@@ -12,6 +12,6 @@ export default axios.create({
 		'Access-Control-Allow-Headers':
 			'Origin, X-Requested-With, Content-Type, Accept',
 		'x-ratelimit-limit': 3600,
-		'x-ratelimit-remaining': 3587
-	}
+		'x-ratelimit-remaining': 3587,
+	},
 });
