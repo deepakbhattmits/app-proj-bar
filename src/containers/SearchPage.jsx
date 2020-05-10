@@ -6,7 +6,7 @@ import { getBeerByName, getBeers } from '../actions';
 import SearchComponent from '../components/SearchComoponent';
 class SearchPage extends Component {
 	state = {
-		beerName: ''
+		beerName: '',
 	};
 	getData = () => {
 		if (this.state.beerName.length > 0) {
@@ -15,18 +15,18 @@ class SearchPage extends Component {
 			this.props.getBeers();
 		}
 	};
-	handleChange = e => {
+	handleChange = (e) => {
 		this.setState({ [e.target.name]: e.target.value }, () => {
 			const timer = setTimeout(() => {
 				this.getData();
-				// console.log('Test');
+				// console.log('Test : ');
 			}, 5000);
 			return () => {
 				clearTimeout(timer);
 			};
 		});
 	};
-	onKeyUp = e => {
+	onKeyUp = (e) => {
 		if (e.keyCode === 13) {
 			this.buttonClick();
 		}
@@ -56,9 +56,9 @@ class SearchPage extends Component {
 		);
 	}
 }
-const mapDispatchToProps = dispatch => ({
-	getBeerByName: data => dispatch(getBeerByName(data)),
-	getBeers: () => dispatch(getBeers())
+const mapDispatchToProps = (dispatch) => ({
+	getBeerByName: (data) => dispatch(getBeerByName(data)),
+	getBeers: () => dispatch(getBeers()),
 });
 // const mapStateToProps = ( state ) => {
 //     return {
