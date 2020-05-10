@@ -5,14 +5,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import FavoriteComponent from '../components/FavoriteComponent';
 import { removeFromfavorites } from '../actions';
 const FavoritePage = () => {
-	const favoriteBeer = useSelector(state => state.beerData.addFbeers);
-	// console.log(favoriteBeer);
+	const favoriteBeer = useSelector((state) => state.beerData.addFbeers);
+	// console.log("",favoriteBeer);
 	const dispatch = useDispatch();
 	return (
 		<div className='ui row'>
 			<FavoriteComponent
 				fBeers={favoriteBeer}
-				umarkFav={e => dispatch(removeFromfavorites(e))}
+				umarkFav={(e) => dispatch(removeFromfavorites(e))}
 			/>
 		</div>
 	);
