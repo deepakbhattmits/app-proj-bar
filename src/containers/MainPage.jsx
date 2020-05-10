@@ -5,12 +5,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import MainComponent from '../components/MainComponent';
 import { getBeers, addTofavorites, removeFromfavorites } from '../actions';
 import SearchPage from './SearchPage';
-const MainPage = props => {
-	console.log(props);
+const MainPage = (props) => {
+	// console.log(props);
 	const dispatch = useDispatch();
-	const beers = useSelector(state => state.beerData.beers);
-	const fbeers = useSelector(state => state.beerData.addFbeers);
-	const favorites = useSelector(state => state.beerData.favorites);
+	const beers = useSelector((state) => state.beerData.beers);
+	const fbeers = useSelector((state) => state.beerData.addFbeers);
+	const favorites = useSelector((state) => state.beerData.favorites);
 	const getfav = () => {
 		return fbeers;
 	};
@@ -19,10 +19,10 @@ const MainPage = props => {
 			dispatch(getBeers()); // action call.
 		}
 	}, [beers, dispatch]);
-	const addToFavorite = e => {
+	const addToFavorite = (e) => {
 		dispatch(addTofavorites(e.target.id));
 	};
-	const removeFromfavorite = e => {
+	const removeFromfavorite = (e) => {
 		dispatch(removeFromfavorites(e.target.id));
 	};
 	return (
