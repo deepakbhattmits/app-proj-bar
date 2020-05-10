@@ -15,7 +15,7 @@ const ScrollToTop = (props) => {
 		}
 		// In all other cases, check fragment/scroll to top
 		let hash = props.location.hash;
-		// console.log('HASH >: ',hash);
+		// console.log('HASH > : ',hash);
 		if (hash) {
 			let element = document.querySelector(hash);
 			if (element) {
