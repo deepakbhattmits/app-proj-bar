@@ -1,1 +1,4 @@
-export * from  './getBeer';
+/** @format */
+
+//exports
+export * from './getBeer';
