@@ -16,7 +16,7 @@ import storage from 'redux-persist/lib/storage';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const persistConfig = {
 	key: 'root',
-	storage
+	storage,
 };
 const persistedReducer = persistReducer(persistConfig, store);
 
@@ -24,7 +24,7 @@ const store1 = createStore(
 	persistedReducer,
 	composeEnhancers(applyMiddleware(reduxThunk))
 );
-// rootElement variable
+//  rootElement variable
 const rootElement = document.querySelector('#root');
 const persistor = persistStore(store1);
 ReactDOM.render(
