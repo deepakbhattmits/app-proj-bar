@@ -9,7 +9,7 @@ const initialState = {
 export const getBeer = (state = { initialState }, action) => {
 	switch (action.type) {
 		case beerConstants.GET_BEERS:
-			// console.log("", action.type);
+			// console.log(" ", action.type);
 			return Object.assign({}, state, { beers: action.payload });
 
 		case beerConstants.GET_BEER_BY_NAME:
