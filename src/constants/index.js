@@ -1,4 +1,4 @@
 /** @format */
 
-// partial export
+//  partial export
 export * from './beer.constants';
