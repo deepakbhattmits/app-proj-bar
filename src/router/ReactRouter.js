@@ -1,19 +1,28 @@
 /** @format */
 
-import React, { Component } from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Router, Route, Switch } from 'react-router-dom';
 import createBrowserHistory from '../helpers/history';
-import Header from '../containers/Header';
-import Footer from '../containers/Footer';
-import MainPage from '../containers/MainPage';
-import FavoritePage from '../containers/FavoritePage';
-import NotFound from '../components/NotFound';
-import ScrollToTop from '../components/ScrollToTop';
 
-class ReactRouter extends Component {
-	render() {
-		// console.log('test : ');
-		return (
+import LoadingSpinner from '../reusable/LoadingSpinner';
+// import ErrorBoundary from '../reusable/ErrorBoundary';
+// import Header from '../containers/Header';
+// import Footer from '../containers/Footer';
+// import MainPage from '../containers/MainPage';
+// import FavoritePage from '../containers/FavoritePage';
+// import NotFound from '../components/NotFound';
+// import ScrollToTop from '../components/ScrollToTop';
+const Header = lazy(() => import('../containers/Header'));
+const Footer = lazy(() => import('../containers/Footer'));
+const MainPage = lazy(() => import('../containers/MainPage'));
+const FavoritePage = lazy(() => import('../containers/FavoritePage'));
+const NotFound = lazy(() => import('../components/NotFound'));
+const ScrollToTop = lazy(() => import('../components/ScrollToTop'));
+
+const ReactRouter = () => {
+	// console.log('test : ');
+	return (
+		<Suspense fallback={<LoadingSpinner />}>
 			<Router history={createBrowserHistory}>
 				<ScrollToTop>
 					<header>
@@ -22,10 +31,23 @@ class ReactRouter extends Component {
 
 					<article>
 						<Switch>
-							<Route exact path='/' component={MainPage} />
+							{/* <Route exact path='/' component={MainPage} />
 							<Route exact path='/home' component={MainPage} />
 							<Route exact path='/favorite' component={FavoritePage} />
-							<Route exact path='*' component={NotFound} />
+							<Route exact path='*' component={NotFound} /> */}
+
+							<Route exact path='/'>
+								<MainPage />
+							</Route>
+							<Route exact path='/home'>
+								<MainPage />
+							</Route>
+							<Route exact path='/favorite'>
+								<FavoritePage />
+							</Route>
+							<Route exact path='*'>
+								<NotFound />
+							</Route>
 						</Switch>
 					</article>
 
@@ -34,7 +56,7 @@ class ReactRouter extends Component {
 					</footer>
 				</ScrollToTop>
 			</Router>
-		);
-	}
-}
+		</Suspense>
+	);
+};
 export default ReactRouter;
