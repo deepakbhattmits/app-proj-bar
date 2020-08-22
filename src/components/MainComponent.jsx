@@ -3,7 +3,7 @@
 import React from 'react';
 
 const MainComponent = (props) => {
-	// console.log("test : ",props);
+	// console.log("test :  ",props);
 	return (
 		<>
 			<div className='ui link cards'>
