@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 // getBeers action
 export const getBeers = () => async (dispatch) => {
 	const response = await api.get(`beers/`);
-	// console.log('getbeers:');
+	// console.log('getbeers :');
 	dispatch({ type: beerConstants.GET_BEERS, payload: response.data });
 };
 export const getBeerByName = (beer_name) => async (dispatch) => {
