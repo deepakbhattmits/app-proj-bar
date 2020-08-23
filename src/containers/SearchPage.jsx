@@ -20,8 +20,10 @@ class SearchPage extends Component {
 			const timer = setTimeout(() => {
 				this.getData();
 				// console.log('Test  : ');
-			}, 5000);
+				this.props.setIsLoading(true);
+			}, 1000);
 			return () => {
+				this.props.setIsLoading(false);
 				clearTimeout(timer);
 			};
 		});
