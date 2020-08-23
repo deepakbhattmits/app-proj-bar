@@ -84,6 +84,9 @@ article {
 	&.link.cards {
 		width: 98%;
 		margin: auto;
+		&:not(.favourite) {
+			justify-content: left;
+		}
 	}
 
 	&.medium.image {
