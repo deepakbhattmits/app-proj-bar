@@ -21,7 +21,7 @@ const Favorite = (props) => {
 						to='/home'
 						onMouseEnter={toggleHover}
 						onMouseLeave={toggleHover}>
-						<i className={`icon hand point left ${hover ? '' : 'outline'}`} />{' '}
+						<i className={`icon hand point left ${hover ? '' : 'outline'}`} />
 						Go Back
 					</Link>
 				</div>
