@@ -6,12 +6,6 @@ import createBrowserHistory from '../helpers/history';
 
 import LoadingSpinner from '../reusable/LoadingSpinner';
 // import ErrorBoundary from '../reusable/ErrorBoundary';
-// import Header from '../containers/Header';
-// import Footer from '../containers/Footer';
-// import MainPage from '../containers/MainPage';
-// import FavoritePage from '../containers/FavoritePage';
-// import NotFound from '../components/NotFound';
-// import ScrollToTop from '../components/ScrollToTop';
 const Header = lazy(() => import('../containers/Header'));
 const Footer = lazy(() => import('../containers/Footer'));
 const MainPage = lazy(() => import('../containers/MainPage'));
