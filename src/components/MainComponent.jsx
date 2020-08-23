@@ -10,7 +10,7 @@ const MainComponent = ({
 	addToFavorite,
 	removeFromfavorite,
 }) => {
-	// console.log('test :', isLoading);
+	// console.log('test : ', isLoading);
 	return (
 		<>
 			<div className='ui link cards'>
