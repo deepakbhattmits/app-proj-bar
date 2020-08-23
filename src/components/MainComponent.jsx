@@ -2,13 +2,20 @@
 
 import React from 'react';
 
-const MainComponent = (props) => {
-	// console.log("test :  ",props);
+const MainComponent = ({
+	beers,
+	// isLoading,
+	className,
+	fbeers,
+	addToFavorite,
+	removeFromfavorite,
+}) => {
+	// console.log('test :', isLoading);
 	return (
 		<>
 			<div className='ui link cards'>
-				{props.beers &&
-					props.beers.map((el, i) => {
+				{beers &&
+					beers.map((el, i) => {
 						return (
 							<div className='card' key={i}>
 								<div className='ui medium image'>
@@ -24,24 +31,24 @@ const MainComponent = (props) => {
 										id={el.id}
 										className={`right floated star icon
                   ${
-										props.className &&
-										Object.values(props.className).filter((item) =>
+										className &&
+										Object.values(className).filter((item) =>
 											item.id === el.id ? item.id : ''
 										).length > 0
 											? 'green'
 											: ''
 									}`}
 										onClick={
-											props.className &&
-											Object.values(props.className).filter((item) =>
+											className &&
+											Object.values(className).filter((item) =>
 												item.id === el.id ? item.id : ''
 											).length > 0
-												? props.removeFromfavorite
-												: props.addToFavorite
+												? removeFromfavorite
+												: addToFavorite
 										}
 										title={`${
-											props.className &&
-											Object.values(props.className).filter((item) =>
+											className &&
+											Object.values(className).filter((item) =>
 												item.id === el.id ? item.id : ''
 											).length > 0
 												? 'Unmark Favorite'
