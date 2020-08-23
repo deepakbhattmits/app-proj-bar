@@ -1,13 +1,14 @@
 /** @format */
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import MainComponent from '../components/MainComponent';
 import { getBeers, addTofavorites, removeFromfavorites } from '../actions';
 import SearchPage from './SearchPage';
 const MainPage = (props) => {
-	// console.log(props,"");
+	// console.log(props," ");
 	const dispatch = useDispatch();
+	const [isLoading, setIsLoading] = useState(false);
 	const beers = useSelector((state) => state.beerData.beers);
 	const fbeers = useSelector((state) => state.beerData.addFbeers);
 	const favorites = useSelector((state) => state.beerData.favorites);
@@ -15,19 +16,21 @@ const MainPage = (props) => {
 		return fbeers;
 	};
 	useEffect(() => {
-		if (!beers) {
-			dispatch(getBeers()); // action call.
-		}
-	}, [beers, dispatch]);
+		// if (!beers) {
+		dispatch(getBeers()); // action call.
+		// }
+		// }, [beers, dispatch]);
+	}, [dispatch]);
 	const addToFavorite = (e) => {
 		dispatch(addTofavorites(e.target.id));
 	};
 	const removeFromfavorite = (e) => {
 		dispatch(removeFromfavorites(e.target.id));
 	};
+
 	return (
 		<>
-			<SearchPage />
+			<SearchPage setIsLoading={setIsLoading} />
 			<div className='ui row'>
 				<MainComponent
 					beers={beers}
@@ -35,6 +38,7 @@ const MainPage = (props) => {
 					addToFavorite={addToFavorite}
 					removeFromfavorite={removeFromfavorite}
 					className={favorites}
+					// isLoading={isLoading}
 				/>
 			</div>
 		</>
