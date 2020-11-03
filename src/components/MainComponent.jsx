@@ -1,16 +1,13 @@
 /** @format */
-
-import React from 'react';
-
 const MainComponent = ({
 	beers,
-	// isLoading,
+	isLoading,
 	className,
 	fbeers,
 	addToFavorite,
 	removeFromfavorite,
 }) => {
-	// console.log('test : ', isLoading);
+	console.log('isloading test : ', isLoading);
 	return (
 		<>
 			<div className='ui link cards'>
