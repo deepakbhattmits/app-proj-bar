@@ -1,6 +1,4 @@
 /** @format */
-
-import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import FavoriteComponent from '../components/FavoriteComponent';
 import { removeFromfavorites } from '../actions';
@@ -17,12 +15,4 @@ const FavoritePage = () => {
 		</div>
 	);
 };
-// const mapDispatchToProps = dispatch => ({
-// 	removeFromfavorites: data => dispatch(removeFromfavorites(data))
-// });
-// const mapStateToProps = state => {
-// 	return {
-// 		favoriteBeer: state.beerData.addFbeers
-// 	};
-// export default connect(mapStateToProps, mapDispatchToProps)(FavoritePage);
 export default FavoritePage;
