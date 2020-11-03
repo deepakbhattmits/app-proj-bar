@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+//import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import reduxThunk from 'redux-thunk';
@@ -8,7 +8,7 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { store } from './helpers';
 import ReactRouter from './router/ReactRouter';
 import './assets/css/style.css';
-import './assets/css/style.scss';
+import './assets/css/_style.scss';
 import { persistStore, persistReducer } from 'redux-persist';
 import { PersistGate } from 'redux-persist/lib/integration/react';
 import storage from 'redux-persist/lib/storage';
