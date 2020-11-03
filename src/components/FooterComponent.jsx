@@ -1,11 +1,7 @@
 /** @format */
-
-import React from 'react';
-
 import { NavLink } from 'react-router-dom';
 
-const Navigation = (props) => {
-	// console.log(props  : ", test ");
+const Navigation = () => {
 	return (
 		<div className='ui secondary  menu footer'>
 			<div className='item'>
