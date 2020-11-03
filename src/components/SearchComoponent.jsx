@@ -1,6 +1,6 @@
 /** @format */
 
-import React from 'react';
+//import React from 'react';
 const SearchComoponent = (props) => {
 	// console.log(props ,"Props");
 	return (
