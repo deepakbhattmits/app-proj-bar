@@ -1,5 +1,5 @@
 /** @format */
-//  beerConstants
+// beerConstants
 export const beerConstants = {
 	GET_BEERS: 'GET_BEERS',
 	GET_BEER_BY_NAME: 'GET_BEER_BY_NAME',
