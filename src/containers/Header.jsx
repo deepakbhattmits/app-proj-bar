@@ -1,6 +1,4 @@
 /** @format */
-
-import React from 'react';
 import NavigationComponent from '../components/NavigationComponent';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
