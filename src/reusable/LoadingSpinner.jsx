@@ -1,7 +1,7 @@
 /** @format */
 
 //import React from 'react';
-
+// LoadingSpinner
 const LoadingSpinner = () => {
 	//  console.log('LoadingSpinner : ');
 	return (
