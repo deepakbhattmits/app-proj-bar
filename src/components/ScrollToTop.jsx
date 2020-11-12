@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 const ScrollToTop = ({ history, location, children }) => {
 	useEffect(() => {
-		// Keep default behavior of restoring scroll position when user:
+		//  Keep default behavior of restoring scroll position when user:
 		// - clicked back button
 		// - clicked on a link that programmatically calls `history.goBack()`
 		// - manually changed the URL in the address bar (here we might want
