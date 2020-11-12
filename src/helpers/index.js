@@ -1,5 +1,5 @@
 /** @format */
 
-//  default exports
+// default exports
 export * from './store';
 export * from './history';
