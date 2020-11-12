@@ -4,6 +4,7 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import { getBeerByName, getBeers } from '../actions';
 import SearchComponent from '../components/SearchComoponent';
+//SearchPage
 class SearchPage extends Component {
 	state = {
 		beerName: '',
