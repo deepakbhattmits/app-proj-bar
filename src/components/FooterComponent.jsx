@@ -1,6 +1,6 @@
 /** @format */
 import { NavLink } from 'react-router-dom';
-
+// NavLink
 const Navigation = () => {
 	return (
 		<div className='ui secondary  menu footer'>
