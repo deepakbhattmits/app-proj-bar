@@ -14,7 +14,7 @@ const MainPage = (props) => {
 		return fbeers;
 	};
 	useEffect(() => {
-		// if (!beers) {
+		//  if (!beers) {
 		dispatch(getBeers()); // action call.
 		// }
 		// }, [beers, dispatch]);
