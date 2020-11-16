@@ -1,7 +1,7 @@
 /** @format */
 
 import axios from 'axios';
-//   baseUrl
+//  baseUrl
 export default axios.create({
 	baseURL: `https://api.punkapi.com/v2/`,
 	headers: {
