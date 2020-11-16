@@ -2,7 +2,7 @@
 
 //import React from 'react';
 const SearchComoponent = (props) => {
-	// console.log(props ,"Props");
+	// console.log(props  ,"Props");
 	return (
 		<div className='ui category search'>
 			<div className='ui icon input'>
