@@ -1,21 +1,31 @@
 /** @format */
 
 //import React from 'react';
-const SearchComoponent = (props) => {
-	// console.log(props ,"Props");
+const SearchComoponent = ({
+	classNameSearch,
+	handleChange,
+	onKeyUp,
+	classNameButton,
+	buttonClick,
+}) => {
+	// console.log(classNameSearch,
+	// handleChange,
+	// onKeyUp,
+	// classNameButton,
+	// buttonClick, "Props");
 	return (
 		<div className='ui category search'>
 			<div className='ui icon input'>
 				<input
-					className={props.classNameSearch}
+					className={classNameSearch}
 					name='beerName'
 					type='text'
 					placeholder='Search for Beer...'
 					autoComplete='off'
-					onChange={props.handleChange}
-					onKeyUp={props.onKeyUp}
+					onChange={handleChange}
+					onKeyUp={onKeyUp}
 				/>
-				<span className={props.classNameButton} onClick={props.buttonClick}>
+				<span className={classNameButton} onClick={buttonClick}>
 					Search
 				</span>
 			</div>
