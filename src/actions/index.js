@@ -1,4 +1,4 @@
 /** @format */
 
-// getBeer
+//  getBeer
 export * from './getBeer';
