@@ -6,7 +6,7 @@ const initialState = {
 	addFbeers: {},
 	favorites: {},
 };
-// getBeer
+//getBeer
 export const getBeer = (state = { initialState }, action) => {
 	switch (action.type) {
 		case beerConstants.GET_BEERS:
