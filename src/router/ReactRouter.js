@@ -5,7 +5,7 @@ import { Router, Route, Switch } from 'react-router-dom';
 import createBrowserHistory from '../helpers/history';
 
 import LoadingSpinner from '../reusable/LoadingSpinner';
-// import ErrorBoundary from '../reusable/ErrorBoundary';
+//  import ErrorBoundary from '../reusable/ErrorBoundary';
 const Header = lazy(() => import('../containers/Header'));
 const Footer = lazy(() => import('../containers/Footer'));
 const MainPage = lazy(() => import('../containers/MainPage'));
