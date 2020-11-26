@@ -10,7 +10,7 @@ const ScrollToTop = ({ history, location, children }) => {
 		// - clicked back button
 		// - clicked on a link that programmatically calls `history.goBack()`
 		// - manually changed the URL in the address bar (here we might want
-		// to scroll to top, but we can't differentiate it from the others)
+		//  to scroll to top, but we can't differentiate it from the others)
 		if (history.action === 'POP') {
 			return;
 		}
