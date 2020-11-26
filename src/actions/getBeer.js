@@ -3,7 +3,7 @@
 import { beerConstants } from '../constants';
 import api from '../helpers/api';
 import { toast } from 'react-toastify';
-// getBeers action
+//  getBeers action
 export const getBeers = () => async (dispatch) => {
 	const response = await api.get(`beers/`);
 	// console.log('getbeers :');
