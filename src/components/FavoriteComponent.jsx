@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 const Favorite = ({ fBeers, umarkFav }) => {
-	// console.log('props :');
+	// console.log('props:');
 	const [hover, setHover] = useState(false);
 	const toggleHover = ({ fBeers, umarkFav }) => {
 		setHover(!hover);
