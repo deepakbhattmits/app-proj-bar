@@ -12,7 +12,7 @@ const SearchComoponent = ({
 	// handleChange,
 	// onKeyUp,
 	// classNameButton,
-	// buttonClick ,"Props");
+	// buttonClick,"Props");
 	return (
 		<div className='ui category search'>
 			<div className='ui icon input'>
