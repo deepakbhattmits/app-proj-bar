@@ -79,7 +79,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { getBeerByName, getBeers } from '../actions';
 import SearchComponent from '../components/SearchComoponent';
-// SearchPage
+//SearchPage
 const SearchPage = (props) => {
 	const dispatch = useDispatch();
 	const [beerName, setBeerName] = useState('');
